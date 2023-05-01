@@ -1,0 +1,4 @@
+﻿bu katmanda bu proje seclere calıstırıldı bundan önce ise
+appsettings bu dosyay connectionstring verıldı yani verıtabanı adı  ve yoolu verılmıs oldu
+daha önce core katmanında olusan migration burda exe olarak calıstırılarak tablolar ekledın
+eklenıncede 1 user ve 1 rolleme eklendı
