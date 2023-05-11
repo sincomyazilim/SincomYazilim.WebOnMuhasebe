@@ -1,1 +1,3 @@
 ﻿bu katmadan  yardımcı katmandır sabıtler,enumlar vb  burda olusturuluyor
+
+44. vodeo const kalsoru olsturduk ve bırda entıtyler ıcın kendtı sabıletımıızı eklıyoruz.ıcergınde bır tablodakı bır alan ıcın lsturulan alana kısıtlma getırıyruz .ornek maxnvarchar vb

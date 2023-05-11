@@ -1,2 +1,15 @@
 ﻿bu katmanda migration ekledin ve daha sonra migrator projesınde verıtabanı olusturuldu
 WebOnMuhasebeDbContext burya dbset<>  'ler eklendi
+
+bu katmanda 43 vıdeodan ıtıbaren confıgrıton dosyası olusturulup entıtlere
+verıtaban eklenmeden önce özeıkler eklenecek..1.05.2023
+
+bu tarıhten ıtıbaren proje tam hızla baslayacak
+
+2.05.2023 yapılanlar 44 video işelndi
+bu katmanda SinConfigurations adında klasor olusturuldu..
+içine extion  yanı odlarkarısmasın dıye bır sınıf olusturduk ve onun ıcıne clasların kıstlamaları yazıldı
+44 videoda shared kattmanında kendı  const larımızı yazacagıız sınıf tanımlıyoruz.adı Entityconst
+
+4.05.2023 bugun ıtıbareıyle kendı tablolarımızı ekledık mıgratıpn yaptık..
+6.05.2023 bugun bu katmanda butun entıtılerın somut hallerını ekledık ders 68-69

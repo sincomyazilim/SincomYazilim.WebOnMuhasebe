@@ -1,24 +1,24 @@
 ﻿
 using System.Data;
 using Microsoft.EntityFrameworkCore;
-using SincomYazilim.WebOnMuhasebe.BankaHesaplar;
-using SincomYazilim.WebOnMuhasebe.Bankalar;
-using SincomYazilim.WebOnMuhasebe.BankaSubeler;
-using SincomYazilim.WebOnMuhasebe.Birimler;
-using SincomYazilim.WebOnMuhasebe.Cariler;
+using SincomYazilim.WebOnMuhasebe.BankaHesaplar.Concrete;
+using SincomYazilim.WebOnMuhasebe.Bankalar.Concrete;
+using SincomYazilim.WebOnMuhasebe.BankaSubeler.Concrete;
+using SincomYazilim.WebOnMuhasebe.Birimler.Concrete;
+using SincomYazilim.WebOnMuhasebe.Cariler.Concrete;
 using SincomYazilim.WebOnMuhasebe.Consts;
-using SincomYazilim.WebOnMuhasebe.Depolar;
-using SincomYazilim.WebOnMuhasebe.Donemler;
-using SincomYazilim.WebOnMuhasebe.Faturalar;
-using SincomYazilim.WebOnMuhasebe.Hizmetler;
-using SincomYazilim.WebOnMuhasebe.Kasalar;
-using SincomYazilim.WebOnMuhasebe.Makbuzlar;
-using SincomYazilim.WebOnMuhasebe.Masraflar;
-using SincomYazilim.WebOnMuhasebe.OzelKodlar;
-using SincomYazilim.WebOnMuhasebe.Parametreler;
+using SincomYazilim.WebOnMuhasebe.Depolar.Concrete;
+using SincomYazilim.WebOnMuhasebe.Donemler.Concrete;
+using SincomYazilim.WebOnMuhasebe.Faturalar.Concrete;
+using SincomYazilim.WebOnMuhasebe.Hizmetler.Concrete;
+using SincomYazilim.WebOnMuhasebe.Kasalar.Concrete;
+using SincomYazilim.WebOnMuhasebe.Makbuzlar.Concrete;
+using SincomYazilim.WebOnMuhasebe.Masraflar.Concrete;
+using SincomYazilim.WebOnMuhasebe.OzelKodlar.Concrete;
+using SincomYazilim.WebOnMuhasebe.Parametreler.Concrete;
 using SincomYazilim.WebOnMuhasebe.SinConfigurations;
-using SincomYazilim.WebOnMuhasebe.Stoklar;
-using SincomYazilim.WebOnMuhasebe.Subeler;
+using SincomYazilim.WebOnMuhasebe.Stoklar.Concrete;
+using SincomYazilim.WebOnMuhasebe.Subeler.Concrete;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -36,8 +36,8 @@ using Volo.Abp.TenantManagement.EntityFrameworkCore;
 
 namespace SincomYazilim.WebOnMuhasebe.EntityFrameworkCore;
 
-[ReplaceDbContext(typeof(IIdentityDbContext))]
-[ReplaceDbContext(typeof(ITenantManagementDbContext))]
+[ReplaceDbContext(typeof(IIdentityDbContext))]//Identıy dbsetlerı burda
+[ReplaceDbContext(typeof(ITenantManagementDbContext))]//app dbsetlerı burda
 [ConnectionStringName("Default")]
 public class WebOnMuhasebeDbContext :
     AbpDbContext<WebOnMuhasebeDbContext>,
@@ -72,7 +72,7 @@ public class WebOnMuhasebeDbContext :
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     #endregion
-    // biz ekledık 43 video
+    // biz ekledık 43 video    bızım dbsetlerı eklıyoruz 01,05,2023
     public DbSet<Banka> Bankalar { get; set; }
     public DbSet<BankaSube> BankaSubeler { get; set; }
     public DbSet<BankaHesap> BankaHesaplar { get; set; }
@@ -126,5 +126,11 @@ public class WebOnMuhasebeDbContext :
         builder.ConfigureFirmaParemetre();//video 54
         builder.ConfigureHizmet();//video 55
         builder.ConfigureKasa();//video 56
+        builder.ConfigureMakbuz();//video 57
+        builder.ConfigureMakbuzHareket();//video 58
+        builder.ConfigureMasraf();//video 59
+        builder.ConfigureOzelKod();//video 60
+        builder.ConfigureStok();//video 61
+        builder.ConfigureSube();//video 62
     }
 }

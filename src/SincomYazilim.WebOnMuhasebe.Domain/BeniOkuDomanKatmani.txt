@@ -1,2 +1,4 @@
 ﻿bu katmanda tablolar olusturuluyor
 turkce olsuturuldu
+41 bölümekadar entıtler ve ılıskılerı eklendı
+66 vıdeodekıler yapıldı yanı ICommonsRepository ekledın
